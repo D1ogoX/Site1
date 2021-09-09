@@ -2,6 +2,6 @@ Site em ASP.NET MVC com o estilo feito com suporte a Bootstrap do (mdbootstrap.c
 
 Tema do jogo de Minecraft.
 
-// Links para visualização:
+//Pré-visualização:
 
-https://ibb.co/album/s5CFK4
+<img src="https://i.ibb.co/mtxsML4/Site-1.png"/>
