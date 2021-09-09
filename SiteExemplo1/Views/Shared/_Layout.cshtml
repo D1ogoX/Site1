@@ -1,0 +1,138 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fynter - @ViewBag.Title</title>
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+          rel="stylesheet" />
+
+    <link rel="stylesheet" href="~/Content/Ui/mdb.min.css" />
+
+    <link rel="stylesheet" href="~/Content/Ui/Cores.css" />
+
+    <style>
+        .navbar-link-personalizado {
+            color: #fdbc02;
+            font-family: 'MinecraftiaRegular';
+        }
+
+            .navbar-link-personalizado:hover {
+                color: #ff8800;
+                font-family: 'MinecraftiaRegular';
+            }
+
+        .minecraft {
+            font-family: 'MinecraftiaRegular';
+        }
+    </style>
+
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/minecraftia" type="text/css" />
+</head>
+<body style="background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 62%, rgba(0,212,255,1) 100%);">
+    <!-- Navbar -->
+    <nav class="navbar sticky-top navbar-expand-lg">
+        <!-- Navbar brand -->
+        <a class="navbar-brand me-2" href="#">
+            <img src="https://i.ibb.co/sjjdftx/Logo-nova-pronta.png"
+                 height="40"
+                 alt=""
+                 loading="lazy"
+                 style="margin-top: -1px;" />
+        </a>
+
+        <!-- Toggle button -->
+        <button class="navbar-toggler"
+                type="button"
+                data-mdb-toggle="collapse"
+                data-mdb-target="#navbarButtonsExample"
+                aria-controls="navbarButtonsExample"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+            <i class="fas fa-bars"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarCenteredExample">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle navbar-link-personalizado"
+                       href="#"
+                       id="navbarDropdownMenuLink"
+                       role="button"
+                       data-mdb-toggle="dropdown"
+                       aria-expanded="false">
+                        <i class="fas fa-archive" style="color: #fdbc02;"></i> &nbsp; Produtos
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <li>
+                            <a class="dropdown-item minecraft" href="@Url.Action("Vips", "Produtos")">VIPS</a>
+                        </li>
+                        <li>
+                            <a class="dropdown-item minecraft" href="#">Cash</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link navbar-link-personalizado" href="#"><i class="fas fa-users" style="color: #fdbc02;"></i> &nbsp; Equipa</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link navbar-link-personalizado" href="#"><i class="fas fa-phone" style="color: #fdbc02;"></i> &nbsp; Suporte</a>
+                </li>
+            </ul>
+            <!-- Left links -->
+
+            <div class="d-flex align-items-center">
+                <button type="button" class="btn btn-link px-3 me-2 navbar-link-personalizado">
+                    <i class="fas fa-unlock" style="color: #fdbc02;"></i> &nbsp;
+
+                    Login
+                </button>
+            </div>
+        </div>
+        <!-- Collapsible wrapper -->
+    </nav>
+    <!-- Navbar -->
+
+
+    <div class="body-content">
+        <br />
+        <br />
+        <br />
+
+        @RenderBody()
+
+        <footer>
+            <div class="container">
+                <div class="row d-flex justify-content-center">
+                    <div class="col">
+
+                        <a href="#" class="btn btn-link">Termos e condições</a>
+
+                    </div>
+
+                    <div class="col">
+
+                        <p>&copy; @DateTime.Now.Year - Fynter</p>
+
+                    </div>
+
+                    <div class="col">
+
+                        <a href="#" class="btn btn-link">A nossa equipa</a>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script type="text/javascript" src="~/Scripts/Ui/mdb.min.js"></script>
+    @RenderSection("scripts", required: false)
+</body>
+</html>
